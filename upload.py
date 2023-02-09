@@ -5,10 +5,13 @@ from decouple import config
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 
+S3_BUCKET_NAME = config('S3_BUCKET_NAME')
+
+
 s3 = boto3.client("s3", aws_access_key_id=AWS_ACCESS_KEY_ID,
                   aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
 
-bucket_name = "lessaclubs3" # Dev
+bucket_name = S3_BUCKET_NAME # Dev
 subfolder = "images"
 
 
